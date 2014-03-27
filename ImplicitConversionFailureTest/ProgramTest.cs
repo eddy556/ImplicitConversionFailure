@@ -25,14 +25,5 @@ namespace ImplicitConversionFailureTest
             Assert.AreEqual(actual, expectedDecimalPlaces);
         }
 
-        [TestMethod]
-        public void Test2DecimalPoint_ConvertFromFloat_ExpectSuccess()
-        {
-            float i = 0.01f;
-            decimal m = Convert.ToDecimal(i);
-            
-            int actual = Program.Precision(m);
-            Assert.AreEqual(actual, expectedDecimalPlaces);
-        }
     }
 }
