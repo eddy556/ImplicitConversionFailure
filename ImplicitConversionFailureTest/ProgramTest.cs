@@ -25,5 +25,13 @@ namespace ImplicitConversionFailureTest
             Assert.AreEqual(actual, expectedDecimalPlaces);
         }
 
+        [TestMethod]
+        public void Test2DecimalPoint_CastFromDouble_ExpectSuccess()
+        {
+            double i = 0.01;
+            int actual = Program.Precision((decimal)i);
+            Assert.AreEqual(actual, expectedDecimalPlaces);
+        }
+
     }
 }
